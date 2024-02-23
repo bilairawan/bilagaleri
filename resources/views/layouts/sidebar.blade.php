@@ -14,15 +14,31 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('beranda')}}">
-                <i class="bi bi-images"></i>
+                <i class="bi bi-house-door"></i>
                     <span>Beranda</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('beranda')}}">
-                <i class="bi bi-people-fill"></i>
+                <a class="nav-link" href="{{route('foto')}}">
+                <i class="bi bi-images"></i>
+                    <span>Foto</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('tentang')}}">
+                <i class="bi bi-people"></i>
                     <span>Tentang Kami</span></a>
             </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('kebijakan')}}">
+                <i class="bi bi-shield-fill-check"></i>
+                    <span>Kebijakan Privasi</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('beranda')}}">

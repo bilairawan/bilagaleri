@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TentangController;
+use App\Http\Controllers\KebijakanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +16,8 @@ use App\Http\Controllers\BerandaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('beranda', [BerandaController::class, 'beranda'])->name('beranda');
-Route::get('/foto', [FotoController::class, 'index'])->name('galeri.foto');
-
-
-// Route::get('/', function () {
-//     return view('dashboard');
-//  })->name('dashboard');
-
-//  Route::get('/', function () {
-//     return view('foto');
-//  })->name('foto');
+Route::get('/beranda', [BerandaController::class, 'beranda'])->name('beranda');
+Route::get('/foto', [FotoController::class, 'index'])->name('foto');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
+Route::get('/kebijakan', [KebijakanController::class, 'index'])->name('kebijakan');

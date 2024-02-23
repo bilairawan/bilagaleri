@@ -47,23 +47,41 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <!-- Page Heading -->
+                <a class="" href="{{route('login')}}">
+                <div class="login">
+                    <div class="container-fluid">
 
-
+                        <button class="btn-53">
+                            <div class="original">LOGIN</div>
+                            <div class="letters">
+                                
+                                <span>L</span>
+                                <span>O</span>
+                                <span>G</span>
+                                <span>I</span>
+                                <span>N</span>
+                       
+                            </div>
+                        </button>
+                </div>
+                </a>
+                
                     @yield('content')
                     <!-- Content Row -->
-                    @include('galeri/foto')
+
 
                 </div>
                 <!-- /.container-fluid -->
-
+                
             </div>
             <!-- End of Main Content -->
+            
 
             <!-- Footer -->
             @include('layouts/footer')
             <!-- End of Footer -->
-
+            
         </div>
         <!-- End of Content Wrapper -->
 
