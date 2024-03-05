@@ -64,17 +64,23 @@
                        
                             </div>
                         </button>
+                    </div>
                 </div>
                 </a>
                 
                     @yield('content')
                     <!-- Content Row -->
-
+                <a class="" href="{{route('post')}}">
+                    <button class="Btn">
+    
+                        <div class="sign">+</div>
+                            
+                        <div class="text">Post</div>
+                    </button>
+                </a>
 
                 </div>
                 <!-- /.container-fluid -->
-                
-            </div>
             <!-- End of Main Content -->
             
 

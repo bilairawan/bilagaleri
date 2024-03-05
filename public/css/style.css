@@ -11,11 +11,116 @@
         font-size: 55%;
     }
 }
+/* Tombol Post */
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 89rem;
+    margin-bottom: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: calc(80px / 2);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(248, 246, 246, 0.959);
+    background: rgb(250, 139, 139);
+}
+
+/* Halaman Upload */
+.file-upload-form {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .file-upload-label input {
+    display: none;
+  }
+  .file-upload-label svg {
+    height: 50px;
+    fill: rgb(250, 139, 139);
+    margin-bottom: 20px;
+  }
+  .file-upload-label {
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 30px 70px;
+    border-radius: 40px;
+    border: 2px dashed rgb(250, 139, 139);
+    box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719);
+  }
+  .file-upload-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .browse-button {
+    background-color: rgb(250, 139, 139);
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s;
+  }
+  .browse-button:hover {
+    background-color: rgb(245, 237, 237);
+  }
+  
+
+/* plus sign */
+.sign {
+    width: 100%;
+    font-size: 2.2em;
+    color: white;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* text */
+.text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+    transition-duration: 0.3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+    width: 125px;
+    transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    padding-left: 15px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 15px;
+}
+/* button click effect*/
+.Btn:active {
+    transform: translate(2px, 2px);
+}
 
 /* Awal Login */
 .form_main {
     width: 300px;
-    height:500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +129,7 @@
     padding: 30px 30px 30px 30px;
     border-radius: 30px;
     box-shadow: 0px 0px 40px rgb(250, 139, 139);
-    margin-top:10rem;
+    margin-top: 10rem;
     margin-left: 47rem;
 }
 

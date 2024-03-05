@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('koleksipribadi', function (Blueprint $table) {
+        Schema::create('album', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('buku_id');
+            $table->string('nama_album');
+            $table->text('deskripsi');
+            $table->date('tanggal_dibuat');
+            $table->unsignedBigInteger('users_id');
+            $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -26,8 +29,8 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('koleksipribadi');
+        Schema::dropIfExists('album');
     }
 };

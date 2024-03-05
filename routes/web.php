@@ -6,6 +6,7 @@ use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\KebijakanController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +17,9 @@ use App\Http\Controllers\KebijakanController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/beranda', [BerandaController::class, 'beranda'])->name('beranda');
+Route::get('/', [BerandaController::class, 'beranda'])->name('beranda');
 Route::get('/foto', [FotoController::class, 'index'])->name('foto');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
 Route::get('/kebijakan', [KebijakanController::class, 'index'])->name('kebijakan');
+Route::get('/post', [PostController::class, 'index'])->name('post');
