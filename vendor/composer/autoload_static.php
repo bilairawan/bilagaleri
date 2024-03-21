@@ -538,6 +538,8 @@ class ComposerStaticInit001f788c3acae297c93dce052eb1e0f3
         'App\\Http\\Controllers\\FotoController' => __DIR__ . '/../..' . '/app/Http/Controllers/FotoController.php',
         'App\\Http\\Controllers\\KebijakanController' => __DIR__ . '/../..' . '/app/Http/Controllers/KebijakanController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+        'App\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
+        'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
         'App\\Http\\Controllers\\TentangController' => __DIR__ . '/../..' . '/app/Http/Controllers/TentangController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

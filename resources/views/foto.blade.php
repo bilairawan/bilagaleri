@@ -1,7 +1,8 @@
 @extends('layouts/app')
 @section('content')
 <!-- Awal Content Foto -->
-<div class="foto">
+<div class="Fotos">
+    <div class="foto">
     <div class="card" style="width: 18rem;">
         <img src="../img/kucing.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -260,6 +261,8 @@
                     <p class="card-text"></p>
                 </div>
     </div>
+</div>
+
     
     
     <!-- upload -->

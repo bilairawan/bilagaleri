@@ -48,25 +48,7 @@
 
                 <!-- Begin Page Content -->
                 <!-- Page Heading -->
-                <a class="" href="{{route('login')}}">
-                <div class="login">
-                    <div class="container-fluid">
-
-                        <button class="btn-53">
-                            <div class="original">LOGIN</div>
-                            <div class="letters">
-                                
-                                <span>L</span>
-                                <span>O</span>
-                                <span>G</span>
-                                <span>I</span>
-                                <span>N</span>
-                       
-                            </div>
-                        </button>
-                    </div>
-                </div>
-                </a>
+                
                 
                     @yield('content')
                     <!-- Content Row -->

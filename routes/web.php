@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\KebijakanController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +24,5 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
 Route::get('/kebijakan', [KebijakanController::class, 'index'])->name('kebijakan');
 Route::get('/post', [PostController::class, 'index'])->name('post');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store'])->name('store');

@@ -13,6 +13,8 @@ return array(
     'App\\Http\\Controllers\\FotoController' => $baseDir . '/app/Http/Controllers/FotoController.php',
     'App\\Http\\Controllers\\KebijakanController' => $baseDir . '/app/Http/Controllers/KebijakanController.php',
     'App\\Http\\Controllers\\LoginController' => $baseDir . '/app/Http/Controllers/LoginController.php',
+    'App\\Http\\Controllers\\PostController' => $baseDir . '/app/Http/Controllers/PostController.php',
+    'App\\Http\\Controllers\\RegisterController' => $baseDir . '/app/Http/Controllers/RegisterController.php',
     'App\\Http\\Controllers\\TentangController' => $baseDir . '/app/Http/Controllers/TentangController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',

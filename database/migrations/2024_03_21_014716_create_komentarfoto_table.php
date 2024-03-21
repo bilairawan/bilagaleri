@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fotos', function (Blueprint $table) {
+        Schema::create('komentarfoto', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_foto');
-            $table->text('deskripsi_foto');
-            $table->date('tanggal_unggah');
-            $table->string('lokasi_file');
-            $table->unsignedBigInteger('album_id');
-            $table->foreign('album_id')->references('id')->on('album');
+            $table->unsignedBigInteger('foto_id');
             $table->unsignedBigInteger('users_id');
-            $table->foreign('users_id')->references('id')->on('users');
+            $table->text('isi_komentar');
+            $table->date('tanggal_komentar');
             $table->timestamps();
+
         });
     }
 
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fotos');
+        Schema::dropIfExists('komentarfoto');
     }
 };

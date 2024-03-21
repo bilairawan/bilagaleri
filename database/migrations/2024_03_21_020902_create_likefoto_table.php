@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('likefoto', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('fotos_id');
-            $table->foreign('fotos_id')->references('id')->on('fotos');
+            $table->unsignedBigInteger('foto_id');
+            $table->foreign('foto_id')->references('id')->on('foto');
             $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
+
         });
     }
 
