@@ -3,27 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
     public function index(){
-        return view('register');
+        return view('register', [
+            'title' => 'register',
+            'active' => 'register'
+        ]);
     }
 
     public function store(Request $request){
-        $validateData = $request->validate([
-            'nama lengkap' => ['required'],
-            'username' => ['required', 'min:3', 'max','unique:users'],
-            'email' => 'required|email'|'unique:users',
-            'alamat' => ['required'],
-            'password' => 'required|min:5|max:255'
+        $validatedData = $request->validate([
+            'username' => ['required', 'unique:App\Models\User,Username', 'max:255'],
+            'password' => ['required', 'max:255', 'min:6'],
+            'email' => ['required', 'email', 'unique:App\Models\User,Email'],
+            'nama_lengkap' => ['required'],
+            'alamat' => ['required']
         ]);
 
-        // $validateData['password'] = Hash::make($validateData['password']);
+        $validatedData['password'] = Hash::make($validatedData['password']);
 
-        // User::create($validateData);
+        User::create($validatedData);
 
-        return redirect('/login')->with('berhasil', 'horray ! pendaftaran berhasil. sekarang, kamu lakukan login');
+        return redirect('/login')->with('success', 'Registration successfull! Please login');
     }
 }

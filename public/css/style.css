@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: flex-start;
     margin-left: 60rem;
-    margin-bottom: 50px;
+    margin-top: 40rem;
     width: 70px;
     height: 70px;
     border-radius: calc(80px / 2);
@@ -311,7 +311,7 @@
 
 .img {
     background: #4158d0;
-    background-image: url("../img/kucing4.png");
+    background-image: url("../img/no.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -325,7 +325,7 @@
 
 .img2 {
     background: #4158d0;
-    background-image: url("../img/kucing5.png");
+    background-image: url("../img/buket.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -458,31 +458,200 @@
 }
 
 /* Awal Foto */
-.foto {
+.grup{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-    margin: 100px;
+    margin: 70px;
+}
+
+.grup-1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    margin: 70px;
 }
 
 .card {
-    border-radius: 20px;
-    width: 70px;
-    height: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 300px;
+    max-height: 330px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+      -4px -4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+      -4px -4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-image-container {
+    width: 100%;
+    height: 64%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background-color: rgb(165, 165, 165);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-icon {
+    font-size: 40px;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 17px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: black;
+    cursor: default;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+  
+  .card-des {
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    margin: 0;
+    font-size: 13px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #888;
+    cursor: default;
+  }
+
+/* Awal Tombol komen */
+.bi-ci{
+    color: rgb(250, 139, 139);
+    margin-left:12rem;
 }
 
-.foto2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-    margin: 50px;
-}
+/* Kolom Komentar */
+.form-container {
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+  }
 
-/* Tombol Like */
+/* Awal Tombol like */
 .heart-container {
     --heart-color: rgb(255, 91, 137);
     position: relative;
-    width: 50px;
-    height: 50px;
-    margin-left: 12rem;
+    width: 45px;
+    height: 45px;
+    margin-left: 10rem;
     margin-top: -2rem;
     transition: 0.3s;
 }
@@ -564,14 +733,241 @@
         display: none;
     }
 }
+
+/* Awal Tombol Akun */
+#btn-message {
+  --text-color: #888;
+  --bg-color-sup: #5e5e5e;
+  /* --online-status: #00da00; */
+  --font-size: 16px;
+  --btn-transition: all 0.2s ease-out;
+}
+
+.button-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 400 var(--font-size) Helvetica Neue, sans-serif;
+  background-color: var(--bg-color);
+  border-radius: 68px;
+  cursor: pointer;
+  padding: 6px 10px 6px 6px;
+  width: fit-content;
+  height: 40px;
+  border: 0;
+  overflow: hidden;
+  position: relative;
+  transition: var(--btn-transition);
+}
+
+
+.content-avatar {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  transition: var(--btn-transition);
+  position: relative;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--bg-color-sup);
+}
+
+.user-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-user {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 50%;
+  outline: solid 2px var(--bg-color);
+  background-color: var(--online-status);
+  transition: var(--btn-transition);
+  animation: active-status 2s ease-in-out infinite;
+}
+
+.notice-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 8px;
+  text-align: initial;
+  color: var(--text-color);
+}
+
+.username {
+  letter-spacing: -6px;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: var(--btn-transition);
+}
+
+.lable-message {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: var(--btn-transition);
+}
+
+.lable-message, .username {
+  font-weight: 600;
+}
+
+.number-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 8px;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--bg-color-sup);
+  border-radius: 20px;
+}
+
+/*==============================================*/
+/* @keyframes active-status {
+  0% {
+    background-color: var(--online-status); */
+  /* }
+
+  33.33% { */
+    /* background-color: #93e200; */
+  /* }
+
+  /* 66.33% { */
+    /* background-color: #93e200;
+  } */ */
+
+  /* 100% {
+    background-color: var(--online-status); */
+  /* }
+} */
 /* Awal Tentang */
-.card-tentang{
+.scroll-1::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+      
+.scroll-1::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #888;
+}
+      
+.container * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+      
+.container {
+    display: flex;
+    overflow-x: scroll;
+    padding: 24px;
+    height: 30rem;
+    width: 60rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-top: 24px;
+    border-radius: 8px;
+    gap: 20px;
+}
+      
+.container .card-in {
+    flex: 0 0 100%;
+    overflow: hidden;
+    object-fit:cover;
+    border-radius: 8px;
+    background-color: #f3a199;
+    scroll-snap-align: start;
+}
+      
+.card-in .card__image {
+    flex: 1;
+    height: 300px;
+}
+      
+.card-in:nth-child(1) .card__image {
+    background-image: linear-gradient(
+    to right top,
+    #051937, 
+    #004d7a, 
+    #008793, 
+    #00bf72, 
+    #a8eb12
+    );
+    background-image: url("../img/h.png") ;
+}
+      
+.card-in:nth-child(2) .card__image {
+    background-image: linear-gradient(
+    to right top, 
+    #dc09a5, 
+    #ce00b4, 
+    #ba00c5, 
+    #9c00d8, 
+    #6f12eb
+    );
+    background-image: url("../img/kin.png") ;
+}
+      
+.card-in:nth-child(3) .card__image {
+    background-image: linear-gradient(
+    to right top, 
+    #dc1009, 
+    #e55f00, 
+    #e49200, 
+    #dac000, 
+    #c7eb12
+    );
+    background-image: url("../img/ist.png") ;
+}
+      
+.card-in .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+      
+.card-in .card__content .card__title {
+    height: 3px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: capitalize;
+}
+      
+.card-in .card__content .card__describe {
+    color: #fff;
+    font-size: 16px;
+}
+
+.img-fluidi{
+    object-fit: cover;
+    width: 100%;
+    height:100%;  
+}
+
+.first{
     margin-left:5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,);
 }
-.img-fluidi{
-    object-fit: cover;
-    width: 100%;
-    height:80%;
+
+.card-tentang{
+    border-radius: 10px;
 }
