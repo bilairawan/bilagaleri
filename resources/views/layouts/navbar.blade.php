@@ -95,7 +95,7 @@
                         </li>
 
                         <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <li class="nav-item dropdown no-arrow mx-1" >
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
@@ -161,46 +161,42 @@
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
-                        
                         <!-- Nav Item - User Information -->
                         @auth
-                        <li class="nav-item dropdown no-arrow">
+                          <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Welcome back, {{auth()->user()->username}}
-                                <span class="mr-2 d-none d-lg-inline text-white small">May Beranda</span>
-                                <i class="bi bi-box-arrow-in-right"></i>
+                                <span class="mr-2 d-none d-lg-inline text-white small">Welcome back, {{auth()->user()->username}}</span>
+                                <i class="bi bi-caret-down-fill" style="color:rgb(255, 248, 248)"></i>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
 
-                            <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/login" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    keluar
-                                </a>
                             <!-- Dropdown - User Information -->
-                            {{-- @if (Auth::check()) --}}
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="/">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        My beranda
+                                    </a>
 
-                        @else
-                            {{-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="/login">
+                                    <form action="/logout" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                    keluar
+                                        </button>
+                                    </form>
+                                @else
+                                <a class="dropdown-item" href="/">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Masuk
-                                </a> --}}
-                                {{-- <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    login
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a> --}}
                             </div>
                             {{-- @endif --}}
-                        </li>
+                          </li>
                         @endauth
+                        {{-- @endauth --}}
                     </ul>
 
                 </nav>

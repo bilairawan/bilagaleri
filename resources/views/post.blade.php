@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/style.css" />
-<form class="file-upload-form">
+<form class="file-upload-form" method="post" enctype="multipart/form-data">
   <label for="file" class="file-upload-label">
     <div class="file-upload-design">
       <svg viewBox="0 0 640 512" height="1em">

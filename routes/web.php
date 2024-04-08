@@ -20,13 +20,16 @@ use App\Http\Controllers\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [BerandaController::class, 'beranda'])->name('beranda')->middleware('guest');
+Route::get('/', [BerandaController::class, 'beranda'])->name('beranda')->middleware('auth');
 Route::get('/foto', [FotoController::class, 'index'])->name('foto');
+Route::post('/foto', [FotoController::class, 'store']);
 Route::get('/komentar', [KomentarController::class, 'index'])->name('komentar');
 Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
 Route::get('/kebijakan', [KebijakanController::class, 'index'])->name('kebijakan');
 Route::get('/post', [PostController::class, 'index'])->name('post');
-Route::get('/register', [RegisterController::class, 'index'])->name('Register');
+// Route::post('/post', [PostController::class, 'store']);
+Route::get('/register', [RegisterController::class, 'index'])->name('Register')->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);

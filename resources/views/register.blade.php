@@ -65,7 +65,7 @@
     
               
            
-<button id="button" ><a href="">Kirim</a></button>
+<button id="button" ><a href="" style="color:rgb(255, 248, 248)">Kirim</a></button>
     <div class="signupContainer">
         <p>Sudah punya akun?</p>
         <a href="/login">Masuk</a>
