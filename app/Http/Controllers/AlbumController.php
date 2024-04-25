@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class Album extends Controller
+class AlbumController extends Controller
 {
-    public function beranda(){
+    public function index(){
         return view('album');
     }
 }

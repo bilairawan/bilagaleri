@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FotoController;
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\KomentarController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\TentangController;
@@ -21,8 +21,8 @@ use App\Http\Controllers\LoginController;
 |
 */
 Route::get('/', [BerandaController::class, 'beranda'])->name('beranda')->middleware('auth');
-Route::get('/foto', [FotoController::class, 'index'])->name('foto');
-Route::post('/foto', [FotoController::class, 'store']);
+Route::get('album', [AlbumController::class, 'index'])->name('album');
+Route::post('/album', [AlbumController::class, 'store']);
 Route::get('/komentar', [KomentarController::class, 'index'])->name('komentar');
 Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
 Route::get('/kebijakan', [KebijakanController::class, 'index'])->name('kebijakan');

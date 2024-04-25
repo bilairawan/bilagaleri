@@ -19,9 +19,9 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('foto')}}">
+                <a class="nav-link" href="{{route('album')}}">
                 <i class="bi bi-images"></i>
-                    <span>Foto</span></a>
+                    <span>Album</span></a>
             </li>
 
             <hr class="sidebar-divider d-none d-md-block">

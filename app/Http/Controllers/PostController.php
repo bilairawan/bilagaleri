@@ -12,9 +12,16 @@ class PostController extends Controller
         return view('post');
     }
 
+    public function create()
+    {
+        return view('album', [
+            "title" => "Album"
+        ]);
+    }
+
     public function store(Request $request)
     {
-        return $request->file('image')->store('foto');
+        return $request->file('image')->store('album');
         // Validasi, 3 field ini diperlukan
         // Jika ada yang kurang, di redirect ke halaman sebelumnya dengan error
         $validated = $request->validate([
@@ -32,14 +39,15 @@ class PostController extends Controller
         $validated['image'] = $foto;
         
         // Simpan gambar di folder public/news dengan nama yang diacak tadi
-        $fotoDirectory = public_path() . '/foto';
+        $fotoDirectory = public_path() . '/albumimage';
         $request->file('image')->move($fotoDirectory, $foto);
         
         // insert row baru di table news dengan data didalam validated
         post::create($validated);
 
         // Redirect ke halaman index
-        return redirect()->route('foto')->with('success', 'Foto berhasil diunggah.');
+        return redirect()->route('album')->with('success', 'Foto berhasil diunggah.');
+        return redirect()->route('album')->with('error', 'Create Album Failed :(');
     }
 
 }
