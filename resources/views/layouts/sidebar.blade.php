@@ -24,6 +24,13 @@
                     <span>Album</span></a>
             </li>
 
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ route('foto') }}">
+                    <i class="bi bi-camera2"></i>
+                    <span>Foto</span>
+                </a>
+            </li>
+
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item active">
