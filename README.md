@@ -23,7 +23,7 @@ Website ini tersedia fitur login Khusus user dan menggunakan fitur yang lebih mu
  -Untuk menjalankan : php artisan serve
 
 * Clone repository from Github
- - Copy link github yang akan di clone : https://github.com/zainafauziyyah/galerifoto
+ - Copy link github yang akan di clone : https://github.com/bilairawan/bilagaleri
 
  - Composer update di terminal : composer update
 
@@ -34,10 +34,10 @@ Website ini tersedia fitur login Khusus user dan menggunakan fitur yang lebih mu
  - Untuk menjalankan : php artisan serve
 
 ## UML/Usecase
-  ![alt text](?https://github.com/bilairawan/bilagaleri/issues/1#issue-2268837910raw=true)
+  ![alt text](https://github.com/bilairawan/bilagaleri/issues/1#issue-2268837910raw?=true)
 
 ## ERD
-  ![alt text](?https://github.com/bilairawan/bilagaleri/issues/1#issuecomment-2082525866raw=true)
+  ![alt text](https://github.com/bilairawan/bilagaleri/issues/1#issuecomment-2082525866raw?=true)
 ## Identity
 
 Name :Nabila Irawan
