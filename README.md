@@ -34,10 +34,10 @@ Website ini tersedia fitur login Khusus user dan menggunakan fitur yang lebih mu
  - Untuk menjalankan : php artisan serve
 
 ## UML/Usecase
-  ![alt text](https://github.com/bilairawan/bilagaleri/issues/1#issue-2268837910?raw=true)
+  ![alt text](?https://github.com/bilairawan/bilagaleri/issues/1#issue-2268837910raw=true)
 
 ## ERD
-  ![alt text](https://github.com/bilairawan/bilagaleri/issues/1#issuecomment-2082525866?raw=true)
+  ![alt text](?https://github.com/bilairawan/bilagaleri/issues/1#issuecomment-2082525866raw=true)
 ## Identity
 
 Name :Nabila Irawan
